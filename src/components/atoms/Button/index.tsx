@@ -23,15 +23,18 @@ const Button: React.FC<Props> = (props) => {
   let styleColor = "";
   switch (props.color) {
     case "primary":
-      styleColor = "bg-primary-light border border-primary-light text-white";
+      styleColor =
+        "bg-primary-light border border-primary-light text-white hover:bg-opacity-90";
       break;
 
     case "transparent":
-      styleColor = "bg-transparent border border-white text-white";
+      styleColor =
+        "bg-transparent border border-white text-white hover:bg-primary-light hover:border-primary-light";
       break;
 
     case "transparent-black":
-      styleColor = "bg-transparent border border-darkGray text-darkGray";
+      styleColor =
+        "bg-transparent border border-darkGray text-darkGray hover:bg-opacity-90";
       break;
 
     default:
@@ -40,7 +43,7 @@ const Button: React.FC<Props> = (props) => {
 
   return (
     <button
-      className={`font-bold uppercase hover:bg-opacity-90 transition-colors ${styleSize} ${styleColor}`}
+      className={`font-bold uppercase transition-colors ${styleSize} ${styleColor}`}
       {...props}
     >
       {props.title}
