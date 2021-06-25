@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
+        serif: ["Playfair Display", ...defaultTheme.fontFamily.serif],
       },
       colors: {
         primary: { light: "#BB8432", DEFAULT: "#694A1C" },

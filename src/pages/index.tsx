@@ -1,7 +1,7 @@
+import dynamic from "next/dynamic";
 import * as React from "react";
 
-const HomePage: React.FC = () => {
-  return <div className="text-2xl">hello world</div>;
-};
+const HomeTemplate = dynamic(() => import("components/templates/HomeTemplate"));
+const HomePage: React.FC = () => <HomeTemplate />;
 
 export default HomePage;
