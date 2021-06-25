@@ -14,13 +14,13 @@ const buttonVariant: Variants = {
 };
 
 const ProductCard: React.FC<Props> = ({ item }) => {
-  const [showButton, setShowButton] = React.useState(false);
+  const [isActive, setIsActive] = React.useState(false);
 
   return (
     <motion.div
-      onHoverStart={() => setShowButton(true)}
-      onHoverEnd={() => setShowButton(false)}
-      animate={showButton ? { scale: 1.08 } : { scale: 1 }}
+      onHoverStart={() => setIsActive(true)}
+      onHoverEnd={() => setIsActive(false)}
+      animate={isActive ? { scale: 1.08 } : { scale: 1 }}
     >
       <div className="relative overflow-hidden">
         <Image
@@ -33,19 +33,19 @@ const ProductCard: React.FC<Props> = ({ item }) => {
         <motion.button
           variants={buttonVariant}
           initial="show"
-          animate={showButton ? "show" : "hide"}
+          animate={isActive ? "show" : "hide"}
           className="absolute left-0 w-full py-1 text-center transition-all bg-black cursor-pointer"
         >
-          <span className="text-sm font-bold text-white uppercase">
+          <span className="text-sm font-semibold text-white uppercase">
             hubungi kami
           </span>
         </motion.button>
       </div>
       <div className="mt-4 text-center">
-        <Link href="/">
+        <Link href={`/${item.slug}`}>
           <motion.a
-            animate={showButton ? { color: "#BB8432" } : { color: "#333333" }}
-            className="text-black"
+            animate={isActive ? { color: "#BB8432" } : { color: "#333333" }}
+            className="text-black cursor-pointer"
           >
             <h4 className="uppercase truncate">{item.name}</h4>
           </motion.a>

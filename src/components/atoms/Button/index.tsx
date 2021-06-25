@@ -1,4 +1,5 @@
 import * as React from "react";
+import { motion } from "framer-motion";
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   title: string;
@@ -42,12 +43,13 @@ const Button: React.FC<Props> = (props) => {
   }
 
   return (
-    <button
+    <motion.button
+      whileHover={{ scale: 1.08 }}
+      whileTap={{ scale: 0.9 }}
       className={`font-bold uppercase transition-colors ${styleSize} ${styleColor}`}
-      {...props}
     >
       {props.title}
-    </button>
+    </motion.button>
   );
 };
 
