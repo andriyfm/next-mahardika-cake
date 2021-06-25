@@ -13,7 +13,7 @@ const Button: React.FC<Props> = (props) => {
       styleSize = "text-sm px-6 py-xs";
       break;
     case "md":
-      styleSize = "text-sm px-8 py-4";
+      styleSize = "text-sm px-7 py-4";
       break;
 
     default:

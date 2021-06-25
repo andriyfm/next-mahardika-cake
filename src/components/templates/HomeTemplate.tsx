@@ -1,10 +1,11 @@
+import HeroSection from "components/organisms/HeroSection";
 import Layout from "components/organisms/Layout";
 import * as React from "react";
 
 const HomeTemplate: React.FC = () => {
   return (
     <Layout>
-      {/* Hero */}
+      <HeroSection />
       {/* About */}
       {/* Feature */}
       {/* Product List */}
