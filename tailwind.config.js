@@ -13,9 +13,12 @@ module.exports = {
         sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: "#694A1C",
+        primary: { light: "#BB8432", DEFAULT: "#694A1C" },
         black: "#333333",
         darkGray: "#666666",
+      },
+      padding: {
+        xs: "10px",
       },
     },
   },

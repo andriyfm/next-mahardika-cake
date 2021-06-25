@@ -18,5 +18,7 @@ module.exports = {
       version: "latest",
     },
   },
-  rules: {},
+  rules: {
+    "react/prop-types": 0,
+  },
 };
