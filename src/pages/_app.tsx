@@ -1,5 +1,5 @@
 import * as React from "react";
-import "tailwindcss/tailwind.css";
+import "styles/global.css";
 import type { AppProps } from "next/app";
 
 // eslint-disable-next-line require-jsdoc
