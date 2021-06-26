@@ -14,7 +14,7 @@ module.exports = {
         serif: ["Playfair Display", ...defaultTheme.fontFamily.serif],
       },
       colors: {
-        primary: { light: "#BB8432", DEFAULT: "#694A1C" },
+        primary: { lighter: "#F0DFC7", light: "#BB8432", DEFAULT: "#694A1C" },
         black: "#333333",
         darkGray: "#666666",
       },
@@ -26,5 +26,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };

@@ -20,8 +20,8 @@ const ProductsSection: React.FC = () => {
 
       {/* Product List */}
       <div className="grid grid-cols-5 gap-y-10 gap-x-6">
-        {dataProducts.map((item) => (
-          <ProductCard key={item.name} item={item} />
+        {dataProducts.map((item, i) => (
+          <ProductCard key={i} item={item} />
         ))}
       </div>
     </section>
